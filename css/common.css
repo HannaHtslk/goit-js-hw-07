@@ -12,18 +12,6 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-* {
-  box-sizing: border-box;
-}
-
-body {
-  color: #2E2F42;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  line-height: 1.33;
-  letter-spacing: 0.96px;
-  background: #E6E6E9;
-}
 
 input {
   padding: 8px;
@@ -100,5 +88,25 @@ ul#categories ul {
   width: 360px;
   padding: 8px 16px 8px 16px;
 }
+
+/* #endregion */
+
+
+/* #region task2 */
+.gallery {
+  display: flex;
+  gap: 24px;
+
+}
+.gallery li{
+  width: calc((100% - 48px) / 2);
+  height: 300px;
+
+}
+
+
+
+
+
 
 /* #endregion */
