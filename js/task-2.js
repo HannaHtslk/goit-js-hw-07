@@ -14,7 +14,7 @@ const images = [
 ];
 
 
-const galeryList = document.querySelector('.gallery');
+const galleryList = document.querySelector('.gallery');
 
 
 const createCard = imageInfo => {
@@ -27,4 +27,4 @@ const createCard = imageInfo => {
 const cardTemplate = images.map(image => createCard(image)).join('');
 
 console.log(cardTemplate);
-galeryList.innerHTML = cardTemplate;
+galleryList.innerHTML = cardTemplate;

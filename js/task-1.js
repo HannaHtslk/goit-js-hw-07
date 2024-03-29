@@ -1,4 +1,4 @@
-const listCategories = document.getElementById('categories');
+
 const listItems = document.querySelectorAll('.item')
 
 
@@ -8,10 +8,10 @@ listItems.forEach(item => {
     const categoryTitle = item.querySelector('h2').textContent;
     
 
-    const numberOfElements = item.querySelectorAll('ul li');
+    const categoryElements = item.querySelectorAll('ul li');
 
     console.log(`Category: ${categoryTitle}`);
-    console.log(`Elements: ${numberOfElements.length}`);
+    console.log(`Elements: ${categoryElements.length}`);
 })
 
 

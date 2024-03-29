@@ -11,13 +11,19 @@ const input = document.querySelector('[type=number]');
 
 
 function createBox() {
-  const boxes = [];
-  const quantityBoxes = input.value;
+  let quantityBoxes = parseInt(input.value);
+
+  if (quantityBoxes >= 1 && quantityBoxes <= 100) {
+  container.innerHTML = '';
+  
+  
   
   for (let i = 0; i < quantityBoxes; i++) {
     const box = document.createElement('div');
     const size = 30 + i * 10;
     const color = getRandomHexColor();
+
+
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = color;
@@ -27,10 +33,12 @@ function createBox() {
     box.style.borderStyle = 'solid';
 
 
-    boxes.push(box);
+    container.appendChild(box);
   }
 
-  container.append(...boxes);
+  
+    input.value = '';
+  }
  
   return container;
 

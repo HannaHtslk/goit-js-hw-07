@@ -3,9 +3,11 @@ const textInput = document.querySelector('[type="text"]');
 const textOutput = document.getElementById('name-output');
 
 textInput.addEventListener('input', event => {
-    textOutput.textContent = event.currentTarget.value.trim();
-    if (textOutput.textContent === '' || textOutput.textContent === ' ') {
+    const inputValue = event.currentTarget.value.trim();
+    if (inputValue === '') {
         textOutput.textContent = 'Anonymous'
+    } else {
+        textOutput.textContent = inputValue;
     }
 });
 
