@@ -131,6 +131,12 @@ h1 {
 
 /* #endregion */
 
+#boxes div{
+  border-color: #2E2F42;
+  border-style: solid;
+  width: 20px;
+  height: 20px;
 
+}
 
 
