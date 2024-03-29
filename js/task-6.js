@@ -16,13 +16,30 @@ function createBox() {
   
   for (let i = 0; i < quantityBoxes; i++) {
     const box = document.createElement('div');
+    const size = 30 + i * 10;
+    const color = getRandomHexColor();
+    box.style.width = `${size}px`;
+    box.style.height = `${size}px`;
+    box.style.backgroundColor = color;
+    box.style.borderRadius = '5px';
+    box.style.marginBottom = '10px';
+    box.style.borderColor = '#2E2F42';
+    box.style.borderStyle = 'solid';
+
+
     boxes.push(box);
   }
 
   container.append(...boxes);
-  console.log(container);
+ 
   return container;
 
 }
+function destroyBoxes() {
+  container.innerHTML = '';
+}
+
 
 createBtn.addEventListener('click', createBox);
+destroyBtn.addEventListener('click', destroyBoxes);
+
